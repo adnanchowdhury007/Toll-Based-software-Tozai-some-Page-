@@ -1,0 +1,488 @@
+
+
+@{
+    ViewBag.Title = "InternationalDepartmentSearch";
+}
+
+
+<style type="text/css">
+    ul li {
+        list-style-type: none;
+        text-decoration: none;
+        display: inline;
+    }
+
+    .firstinput {
+        width: 130px;
+    }
+
+    .changelistyle {
+        margin-right: 2px;
+    }
+
+    input[type=radio] {
+        margin-top: 0px;
+    }
+
+    select {
+        width: 80px;
+        margin-left: 10px;
+        height: 24px;
+    }
+
+    p, label {
+        padding: 0;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    input[type=checkbox] {
+        margin-top: -2px;
+    }
+
+    .ul-1 {
+        margin-top: 15px;
+        word-spacing: 1.5em;
+        /*margin-bottom: 15px;*/
+        width: 100%;
+    }
+
+    .ul-2 {
+        /*margin-top: 15px;*/
+        /*word-spacing: 1.5em;*/
+        /*margin-bottom: 15px;*/
+        width: 100%;
+    }
+
+        .ul-2 li {
+            width: 100%;
+        }
+
+    .ul-3 {
+        /*margin-top: 30px;*/
+        /*word-spacing: 1.5em;*/
+        /*margin-bottom: 15px;*/
+        width: 100%;
+        /*position: fixed;*/
+    }
+
+    .ul-4 {
+        /*margin-top: 30px;*/
+        /*word-spacing: 1.5em;*/
+        /*margin-bottom: 15px;*/
+        width: 100%;
+        position: relative;
+    }
+
+    .checkbox-class {
+        width: auto;
+    }
+
+    .chkbox {
+        width: 13%;
+        padding: 0px 0px;
+        position: relative;
+    }
+
+    li.chkbox p {
+        width: auto;
+        padding: 0px 0px;
+        float: left;
+    }
+
+    #tbl-2 thead tr th, #tbl-2 tbody tr td {
+        border: 1px solid black;
+    }
+
+    /*  */
+
+    fieldset.scheduler-border {
+        border: 1px groove #ddd !important;
+        /*padding: 0 1.4em 1.4em 1.4em !important;
+        margin: 0 0 1.5em 0 !important;*/
+        padding: 0px 5px 15px 0px !important;
+        margin: 0px 0px 5px 0px !important;
+        -webkit-box-shadow: 0px 0px 0px 0px #000;
+        box-shadow: 0px 0px 0px 0px #000;
+    }
+
+    legend.scheduler-border {
+        font-size: 1.2em !important;
+        font-weight: bold !important;
+        text-align: left !important;
+        width: auto;
+        padding: 0 10px;
+        border-bottom: none;
+    }
+
+    /* */
+</style>
+
+<link href="~/Custom/css/style.css" rel="stylesheet" />
+
+<div class="container-fluid" style="font-size:12px;">
+    <div class="row" style="height: 15px;"></div>
+    <div class="row" style="background: #98beef;padding: 15px;border-radius: 10px 10px 10px 10px;margin-left:15px;margin-right:15px;">
+        <div class=" col-sm-12 col-md-12 col-lg-12 ">
+      
+            <div id="node-1" class="" style="min-height: 400px;">
+                <div class=" col-sm-12 col-md-12 col-lg-12" style="border-radius: 5px;border: 1px solid #2a82c4;background: #eef3f9;height:500px;  ">
+
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                            <div class="control-group" style="padding: 0px;margin-left:-32px;margin-right: 0px;">
+                                <label class="control-label input-label col-sm-5" for="" style="width: 150px;padding-top: 10px;padding-bottom: 10px;font-weight: 700;">
+                                    組合員コード
+                                </label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="" id="" name="" style="width: 200px;margin-top: 6px;padding-bottom: 10px;" />
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="control-group" style="padding: 0px;margin-left: -32px;margin-right: 0px;">
+                                <label class="control-label input-label col-sm-5" for="" style="width: 150px;padding-top: 10px;padding-bottom: 10px;font-weight: 700;">
+                                    組合員名
+                                </label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="" id="" name="" style="width: 200px;margin-top: 6px;padding-bottom: 10px;" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                            <div class="control-group" style="padding: 0px;margin-left:-32px;margin-right: 0px;">
+                                <label class="control-label input-label col-sm-5" for="" style="width: 150px;padding-top: 10px;padding-bottom: 10px;font-weight: 700;">
+                                    送出し機関コード
+
+                                </label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="" id="" name="" style="width: 200px;margin-top: 6px;padding-bottom: 10px;" />
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="control-group" style="padding: 0px;margin-left: -32px;margin-right: 0px;">
+                                <label class="control-label input-label col-sm-5" for="" style="width: 150px;padding-top: 10px;padding-bottom: 10px;font-weight: 700;">
+                                    送出し機関名
+                                </label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="" id="" name="" style="width: 200px;margin-top: 6px;padding-bottom: 10px;" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                            <div class="control-group" style="padding: 0px;margin-left:-32px;margin-right: 0px;">
+                                <label class="control-label input-label col-sm-5" for="" style="width: 150px;padding-top: 10px;padding-bottom: 10px;font-weight: 700;">
+                                    委託者コード
+                                </label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="" id="" name="" style="width: 200px;margin-top: 6px;padding-bottom: 10px;" />
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="control-group" style="padding: 0px;margin-left: -32px;margin-right: 0px;">
+                                <label class="control-label input-label col-sm-5" for="" style="width: 150px;padding-top: 10px;padding-bottom: 10px;font-weight: 700;">
+                                    委託者名
+                                </label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="" id="" name="" style="width: 200px;margin-top: 6px;padding-bottom: 10px;" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                            <div class="control-group" style="padding: 0px;margin-left:-32px;margin-right: 0px;">
+                                <label class="control-label input-label col-sm-5" for="" style="width: 150px;padding-top: 10px;padding-bottom: 10px;font-weight: 700;">
+                                    実習生コード
+                                </label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="" id="" name="" style="width: 200px;margin-top: 6px;padding-bottom: 10px;" />
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="control-group" style="padding: 0px;margin-left: -32px;margin-right: 0px;">
+                                <label class="control-label input-label col-sm-5" for="" style="width: 150px;padding-top: 10px;padding-bottom: 10px;font-weight: 700;">
+                                    実習生名
+                                </label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="" id="" name="" style="width: 200px;margin-top: 6px;padding-bottom: 10px;" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                            <div class="control-group" style="padding: 0px;margin-left: -32px;margin-right: 0px;">
+                                <label class="control-label input-label col-sm-5" for="" style="width: 150px;padding-top: 10px;padding-bottom: 10px;font-weight: 700;">
+                                    入国日
+                                </label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="" id="" name="" style="width: 200px;margin-top: 6px;padding-bottom: 10px;" />
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6" style="margin-bottom:30px;">
+                            <div class="control-group" style="padding: 0px;margin-left: -32px;margin-right: 0px;margin-bottom:30px;">
+                                <label class="control-label input-label col-sm-5" for="" style="width: 150px;padding-top: 10px;padding-bottom: 10px;font-weight: 700;">
+                                    再入国日
+                                </label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="" id="" name="" style="width: 200px;margin-top: 6px;padding-bottom: 10px;" />
+                                </div>
+                            </div>
+
+                        </div><br /><br /><br /><br />
+                        <ul class="ul-3">
+                            @*<li class=""><span>申込日</span> <input type="text" class=""> </li>*@
+                            <li class="">
+                                <span>
+                                    経歴
+                                </span>
+                                <select style="width:160px;">
+                                    <option value="value">
+                                        ：研修中
+                                    </option>
+                                    <option value="value">
+                                        ：一時帰国
+                                    </option>
+                                    <option value="value">
+                                        ：帰国
+                                    </option>
+                                    <option value="value">
+                                        ：全て
+
+                                    </option>
+                                </select>
+                            </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <li class="">
+                                <span>
+                                    国名
+                                </span>
+                                <select style="width:170px;">
+                                    <option value="value"></option>
+                                    <option value="value">select</option>
+                                    <option value="value"></option>
+                                </select>
+                            </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            @*<li class=""><span>更新日</span> <input type="text" class=""> </li>*@
+                            <li class="">
+                                <span>
+                                    ステイタス
+                                </span>
+                                <select style="width:170px;">
+                                    <option value="value">
+                                        ：実習生
+                                    </option>
+                                    <option value="value">
+                                        ：技能実習1号
+                                    </option>
+                                    <option value="value">
+                                        ：技能実習2号
+                                    </option>
+                                    <option value="value">
+                                        ：技能実習3号
+
+                                    </option>
+                                    <option value="value">
+                                        ：建設就労
+
+                                    </option>
+                                </select>
+                            </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <li class="">
+                                <span>
+                                    帳票
+                                    &nbsp;&nbsp;
+                                </span>
+                                <select style="width:160px;">
+                                    <option value="value"></option>
+                                    <option value="value">select</option>
+                                </select>
+                            </li>
+
+                            @*</ul>
+                    <br />
+                    <ul class="ul-3">
+                        <li class="">
+                            <span> 帳票 &nbsp;&nbsp;</span>
+                            <select>
+                                <option value="value">：業務部</option>
+                                <option value="value">：NKU</option>
+                            </select>
+                        </li>*@
+
+                        </ul>
+                    </div>
+                    <br /><br /><br />
+
+                    @*<div class="col-md-12">
+                <fieldset class="scheduler-border">
+                    <legend class="scheduler-border">
+                        回収日付
+                    </legend>
+                    <div class="control-group">
+                        <label class="control-label input-label col-sm-3" for="">退会予告書</label>
+                        <div class="col-sm-8" style="margin-bottom: 3px;">
+                            <input type="text" class="datetime" id="" name="" />
+                        </div>
+                        <label class="control-label input-label col-sm-3" for="">出資証券</label>
+                        <div class="col-sm-8" style="margin-bottom: 3px;">
+                            <input type="text" class="datetime" id="" name="" />
+                        </div>
+                        <label class="control-label input-label col-sm-3" for="">給油カード</label>
+                        <div class="col-sm-8" style="margin-bottom: 3px;">
+                            <input type="text" class="datetime" id="" name="" />
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="col-md-7 text-right">
+                    <label style=" padding-top: 5px;">ステータス：可決</label>
+                </div>
+                <div class="col-md-5">
+                    <input type="submit" value="確定" class="fieldset1-button1" style="height:30px;width: 102px;">
+                </div>
+            </div>*@
+
+                    <div class="col-md-12" style="margin-bottom:30px;">
+                        <input type="button" value="すべてチェックする
+" class="fieldset1-button1" style="height:30px;width: 120px;" />
+                        <input type="button" value="すべてチェック外す
+" class="fieldset1-button1" style="height:30px;width: 120px; margin-left:22px;" />
+                        <input type="button" value="検索
+
+" class="fieldset1-button1" style="height:30px;width: 120px; float:right; margin-right:20px;" />
+
+
+                    </div><br /><br />
+
+                    <div>
+                        <br /><table class="fourthtable" border="1" >
+                            <tr>
+                                <th></th>
+                                <th>
+                                    組合員
+                                    コード
+                                </th>
+                                <th>
+                                    組合員名
+                                </th>
+                                <th>
+                                    送出し機関
+                                    コード
+                                </th>
+                                <th>
+                                    送出し機関名
+                                </th>
+                                <th>
+                                    紹介者
+                                    コード
+                                </th>
+                                <th>
+                                    紹介者名
+                                </th>
+                                <th>
+                                    実習生
+                                    コード
+                                </th>
+                                <th>
+                                    実習生名
+                                </th>
+                                <th>
+                                    入国日
+                                </th>
+                                <th>
+                                    再入国日
+                                </th>
+                                <th>
+                                    ステイタス
+                                </th>
+                                <th>
+                                    帰国
+                                </th>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>0001</td>
+                                <td>
+                                    ㈱山田商事
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" /></td>
+                                <td>0002</td>
+                                <td>
+                                    ㈱山田商事
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                        </table>
+                    </div>
+                    <div class="col-md-12" >
+                        <div class="col-md-7"></div>
+                        <div class="col-md-5" style="margin-bottom:20px;">
+                            <input type="button" value="日付登録" class="fieldset1-button1" style="height:30px;width: 120px;float:right; margin-left:20px;" />
+                            <input type="button" value="帳票プレビュー" class="fieldset1-button1" style="height:30px;width: 120px;float:right;" />
+                        </div><br /><br />
+                        <div class="col-md-7"></div>
+                        <div class="col-md-5">
+                            <input type="button" value="日付登録" class="fieldset1-button1" style="height:30px;width: 120px;float:right;margin-left:20px;" />
+                            <input type="button" value="帳票プレビュー" class="fieldset1-button1" style="height:30px;width: 120px;float:right;" />
+
+                        </div>
+                    </div>
+                </div>
+                    
+                   
+                
+            </div>
+            </div>
+            </div>
+        </div>
+    
+    <div class="row" style="height: 15px;"></div>
+
+
+
+
+
+
+

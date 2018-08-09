@@ -1,0 +1,317 @@
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@*<div class="container-fluid" style="background-color:#F0F0F0;border-color:#F0F0F0">
+        <div class="row" style="background-color:#FE329E;width:100%;height:35px;">
+            <div style="line-height:15px;">
+                <br />
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <span style="font-size:large;text-align:center; color:white; font-size:18px;font-weight:bold; margin-top:-10px;">Distributor's Master Data</span>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <span style="font-size:large;margin-top:10px;margin-left:-15px;">Upload distributor's Master Data :</span>
+            </div>
+            <hr style="margin-top:40px; background-color:#707070;height:1px;" />
+            <hr style="height:3px; background-color:#707070; width:250px; margin-left:0px; margin-top:-23px;border-radius:25px;" />
+        </div>
+    </div>*@
+
+
+
+
+
+
+
+
+<div class="container-fluid">
+    <div class="col-md-12 col-sm-12 col-lg-12" style="background-color:#F0F0F0;border-color:#F0F0F0">
+        <div class="" style="background-color:#FE329E;width:100%;height:35px;">
+            <div style="line-height:15px;">
+                <br />
+            </div>
+            <div class="row">
+                <span class="col-md-12 col-sm-12 col-lg-12" style="font-size:large;text-align:center; color:white; font-size:18px;font-weight:bold; margin-top:-10px;">Distributor's Master Data</span>
+            </div>
+            <div>
+                <span class="col-md-12 col-sm-12 col-lg-12" style="font-size:large;margin-top:10px;margin-left:-15px;">Upload distributor's Master Data :</span>
+            </div>
+
+            @*<hr class="style1" style="height:0px;margin-top:40px;" />*@
+
+
+            <hr style="margin-top:0px; background-color:#707070;height:1px;" />
+            <hr style="height:3px; background-color:#707070; width:250px; margin-left:0px; margin-top:-23px;border-radius:25px;" />
+
+        </div>
+
+
+        <div style="line-height:5px;">
+            <br />
+        </div>
+        <div class="panel-body" style="margin-top:27px">
+
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <span>Search Data:</span><button style="margin-left:15px;background-color:#101E33;color:white; width:45%;font-size:14px">Upload Data</button>
+                </div>
+
+                <div class="col-lg-5 col-md-5 col-sm-5">
+                    <div class="form-group">
+                        <input type="date" name="name" style="width:35%;" /><a href="#" title="Calender">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </a>
+                        <input type="button" style="background-color:forestgreen;color:white; width:42%;margin-left:4px" value="Load Uploaded Data" />
+                    </div>
+                </div>
+
+                <div class="col-lg-1 col-md-1 col-sm-1">
+                    <input type="button" style="background-color:saddlebrown;color:white;margin-left:-67px;margin-top:1px" value="Refresh" />
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <div class="form-group">
+                        <input type="date" name="name" style="width:60%; " /><a href="#" title="Calender">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </a>
+                        <input type="button" style="background-color:orangered;color:white;float:right;width:30%" value="Delete" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <input id="fileUpload" name="FileUpload" multiple="" type="file" /><br />
+                    <input type="button" style="width:40%" value="Upload" />
+                </div>
+
+                <div class="col-lg-5 col-md-5 col-sm-5">
+
+                    <div class="form-group">
+
+                        <span style="margin-left:50px">DisCodeNo:</span>
+                        <input type="text" name="name" value="" style="width:42%;margin-left:25px" />
+
+                    </div>
+                </div>
+
+                <div class="col-lg-1 col-md-1 col-sm-1">
+
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <div class="form-group">
+                        <input type="button" style="background-color:forestgreen;color:white; float:left;width:45%" value="Attachment" />
+                        <input type="button" style="background-color:forestgreen;color:white; float:right;width:40%" value="Add" />
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <hr style="margin-top:0px; background-color:#707070;height:1px;" />
+        <hr style="height:3px; background-color:#707070; width:250px; margin-left:0px; margin-top:-23px;border-radius:25px;" />
+
+        <div style="line-height:5px;">
+            <br />
+        </div>
+
+
+        <div class="panel-body" style="margin-top:-6px">
+
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-3">
+
+                    <div>
+                        <form style="margin-top:-18px;">
+                            <span><b>Search By</b>
+                            </span>
+                            <div class="radio">
+                                <label style="font-size:11px"><input type="radio" name="optradio">Name,code Or wallet</label>
+                            </div>
+                            <div class="radio">
+                                <label style="font-size:11px"><input type="radio" name="optradio">All and data Range</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <form style="float:right;margin-top:-66px;">
+                            <div class="radio">
+                                <label style="font-size:11px"><input type="radio" name="optradio">Name</label>
+                            </div>
+                            <div class="radio">
+                                <label style="font-size:11px"><input type="radio" name="optradio">Code</label>
+                            </div>
+                            <div class="radio">
+                                <label style="font-size:11px"><input type="radio" name="optradio">MerhcantID</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-5 col-sm-5">
+                    <div class="form-group">
+                        <div>
+
+
+                            <select>
+                                <option value="volvo">Volvo</option>
+                                <option value="saab">Saab</option>
+                                <option value="opel">Opel</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                            <div style="float:right;margin-right: 56px;">
+                                <span>Date From</span>
+                                <input type="date" name="name" style="width:47%;" /><a href="#" title="Calender">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </a>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-1 col-md-1 col-sm-1">
+                    <div class="form-group">
+                        <div style="float:right">
+                            <span>To</span>
+                            <input type="date" name="name" style="width:74%;" /><a href="#" title="Calender">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-3" style="
+    margin-top: -24px;
+    margin-left: 76px;
+">
+                    <div class="form-group">
+                        <input type="button" style="background-color:forestgreen;color:white; float:left;width:40%" value="Load" />
+                        <input type="button" style="background-color:saddlebrown;color:white;float:right;width: 50%;font-size: 14px;height: 23px;" value="Export To Excel" />
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+
+            .........................................
+            <div class="row">
+
+                <input type="text" value="Distributor" style="width:100px; height:30px;border: 2px solid #415068; float:left;background-color:black;color:white" />
+                <input type="text" value="DisCodeNo" style="width:100px; height:30px;border: 2px solid #415068; float:left;background-color:black;color:white" />
+                <input type="text" value="Master Agent Wallet" style="width:100px; height:30px;border: 2px solid #415068; float:left;background-color:black;color:white" />
+                <input type="text" value="Region" style="width:90px; height:30px;border: 2px solid #415068; float:left;background-color:black;color:white" />
+                <input type="text" value="Status" style="width:90px; height:30px;border: 2px solid #415068; float:left;background-color:black;color:white" />
+                <input type="text" value="Security Diposit" style="width:100px; height:30px;border: 2px solid #415068; float:left;background-color:black;color:white" />
+                <input type="text" value="Sub GL Code" style="width:100px; height:30px;border: 2px solid #415068; float:left;background-color:black;color:white" />
+                <input type="text" value="GL Distributor Diposit" style="width:100px; height:30px;border: 2px solid #415068; float:left;background-color:black;color:white" />
+                <input type="text" value="Date of Upload" style="width:100px; height:30px;border: 2px solid #415068; float:left;background-color:black;color:white" />
+                <input type="text" value="-" style="width:90px; height:30px;border: 2px solid #415068; float:left; text-align:center;background-color:black;color:white" />
+
+            </div>
+
+
+            <div class="row">
+
+                <input type="text" style="width:100px; height:30px;border: 2px solid #415068;float:left;" />
+                <input type="text" style="width:100px; height:30px;border: 2px solid #415068; float:left;" />
+                <input type="text" style="width:100px; height:30px;border: 2px solid #415068;float:left;" />
+                <input type="text" style="width:90px; height:30px;border: 2px solid #415068; float:left;" />
+                <input type="text" style="width:90px; height:30px;border: 2px solid #415068;float:left;" />
+                <input type="text" style="width:100px; height:30px;border: 2px solid #415068; float:left;" />
+                <input type="text" style="width:100px; height:30px;border: 2px solid #415068;float:left; background-color:darkgrey"readonly />
+                <input type="text" style="width:100px; height:30px;border: 2px solid #415068; float:left;background-color:darkgrey" readonly/>
+
+                <input type="text" style="width:100px; height:30px;border: 2px solid #415068;float:left;background-color:darkgrey"readonly />
+                <input type="button" value="Save" style="width:90px; height:30px;border: 2px solid #415068;float:left;" />
+
+            </div>
+
+            <div id="grid1" data-role="grid" class="k-grid k-widget k-reorderable" style="height: 250px;width: 102%;margin-left: -16px;">
+
+                <div class="k-grid-header" style="padding-right: 17px;"><div class="k-grid-header-wrap k-auto-scrollable" data-role="resizable"><table role="grid"><colgroup><col style="width:10%"><col style="width:15%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:8%"></colgroup><thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader" data-field="ID" aria-haspopup="true" rowspan="1" data-index="0" id="7e6bda02-8ae5-4831-9fec-79949f89005c" style="display:none" class="k-header" data-role="columnsorter"><a class="k-link" href="#">ID</a></th><th scope="col" role="columnheader" data-field="ItemCode" aria-haspopup="true" rowspan="1" data-title="Date" data-index="1" id="08a69205-5c9b-4f10-904a-ec34fc38b3dd" class="k-header" data-role="columnsorter"><a class="k-link" href="#">Distributor</a></th><th scope="col" role="columnheader" data-field="ItemName" aria-haspopup="true" rowspan="1" data-title="Bank Settlement" data-index="2" id="f99ddf3d-73eb-4a45-8603-a0f1c71a4585" class="k-header" data-role="columnsorter"><a class="k-link" href="#">Distributor Code No</a></th><th scope="col" role="columnheader" data-field="UnitName" aria-haspopup="true" rowspan="1" data-title="S.F Rate" data-index="3" id="de8fdfa1-69a6-4b1f-b8a1-5d580795b897" class="k-header" data-role="columnsorter"><a class="k-link" href="#">Wallet No</a></th><th scope="col" role="columnheader" data-field="UnitName" aria-haspopup="true" rowspan="1" data-title="S.F with VAT" data-index="4" id="71216d30-380a-442f-8e6e-0a3a87382cca" class="k-header" data-role="columnsorter"><a class="k-link" href="#">Region</a></th><th scope="col" role="columnheader" data-field="UnitName" aria-haspopup="true" rowspan="1" data-title="VAT" data-index="5" id="1b8af10c-e450-440f-bc60-87400510af99" class="k-header" data-role="columnsorter"><a class="k-link" href="#">Status</a></th><th scope="col" role="columnheader" data-field="UnitName" aria-haspopup="true" rowspan="1" data-title="S.F Ex. VAT" data-index="6" id="d1a1f3aa-463c-435e-bc19-f64625446bdf" class="k-header" data-role="columnsorter"><a class="k-link" href="#">Security Deposit</a></th><th scope="col" role="columnheader" data-field="UnitName" aria-haspopup="true" rowspan="1" data-title="AIT(10%)" data-index="7" id="2fa06709-fd50-4c18-b996-0b328cc1ff32" class="k-header" data-role="columnsorter"><a class="k-link" href="#">Sub GL </a></th><th scope="col" role="columnheader" data-field="UnitName" aria-haspopup="true" rowspan="1" data-title="S.F Ex. AIT" data-index="8" id="9dd9f8b1-5acb-431b-8dd2-6d01a58e1822" class="k-header" data-role="columnsorter"><a class="k-link" href="#">Date of data Uploaded</a></th><th scope="col" role="columnheader" data-field="UnitName" aria-haspopup="true" rowspan="1" data-title="Receivable from SME" data-index="9" id="3d9fbd18-2953-4bb5-a631-bbc3e0a27997" class="k-header" data-role="columnsorter"><a class="k-link" href="#">-</a></th><th scope="col" role="columnheader" data-field="ItemDescription" aria-haspopup="true" rowspan="1" data-index="10" id="82a65aa8-c20a-4975-8378-bcb006094d15" style="display:none" class="k-header" data-role="columnsorter"><a class="k-link" href="#">-</a></th><th scope="col" role="columnheader" data-field="ReOrderLevel" aria-haspopup="true" rowspan="1" data-index="11" id="2c972bd5-4479-4bd4-b9ab-bfd44f40c080" style="display:none" class="k-header" data-role="columnsorter"><a class="k-link" href="#">-</a></th><th scope="col" role="columnheader" data-field="ItemSpac" aria-haspopup="true" rowspan="1" data-index="12" id="3b16aa2f-5bde-47ac-b4f1-bd90670cdc73" style="display:none" class="k-header" data-role="columnsorter"><a class="k-link" href="#">ItemSpac</a></th><th scope="col" role="columnheader" data-field="ItemCatID" aria-haspopup="true" rowspan="1" data-index="13" id="56b15339-efc5-437f-b8f6-d683e7ad15ec" style="display:none" class="k-header" data-role="columnsorter"><a class="k-link" href="#">ItemCatID</a></th><th scope="col" role="columnheader" data-field="MCatID" aria-haspopup="true" rowspan="1" data-index="14" id="5307769b-1fc8-48dd-9834-dea680a7239e" style="display:none" class="k-header" data-role="columnsorter"><a class="k-link" href="#">MCatID</a></th><th scope="col" role="columnheader" aria-haspopup="true" rowspan="1" data-title="Action" data-index="15" id="b0afaeba-c4ee-48be-80a9-72d7b57b97bd" class="k-header" data-role="droptarget">-</th></tr></thead></table></div></div><div class="k-grid-content k-auto-scrollable" style="height: 169px;"><table role="grid" style="height: auto;"><colgroup><col style="width:10%"><col style="width:15%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:7%"><col style="width:8%"></colgroup><tbody role="rowgroup"></tbody></table></div><div class="k-pager-wrap k-grid-pager k-widget k-floatwrap" data-role="pager"><a href="#" aria-label="Go to the first page" title="Go to the first page" class="k-link k-pager-nav k-pager-first k-state-disabled" data-page="1" tabindex="-1"><span class="k-icon k-i-seek-w"></span></a><a href="#" aria-label="Go to the previous page" title="Go to the previous page" class="k-link k-pager-nav  k-state-disabled" data-page="1" tabindex="-1"><span class="k-icon k-i-arrow-w"></span></a><ul class="k-pager-numbers k-reset"><li class="k-current-page"><span class="k-link k-pager-nav">0</span></li><li><span class="k-state-selected">0</span></li></ul><a href="#" aria-label="Go to the next page" title="Go to the next page" class="k-link k-pager-nav  k-state-disabled" data-page="0" tabindex="-1"><span class="k-icon k-i-arrow-e"></span></a><a href="#" aria-label="Go to the last page" title="Go to the last page" class="k-link k-pager-nav k-pager-last k-state-disabled" data-page="0" tabindex="-1"><span class="k-icon k-i-seek-e"></span></a><span class="k-pager-sizes k-label"><span title="" class="k-widget k-dropdown k-header" unselectable="on" role="listbox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-owns="" aria-disabled="false" aria-busy="false" aria-activedescendant="d2450802-7ee8-41e6-b38a-c771863418dc" style=""><span unselectable="on" class="k-dropdown-wrap k-state-default"><span unselectable="on" class="k-input">All</span><span unselectable="on" class="k-select" aria-label="select"><span class="k-icon k-i-arrow-60-down"></span></span></span><select data-role="dropdownlist" style="display: none;"><option value="all">All</option><option value="5">5</option><option value="10">10</option><option value="20">20</option></select></span>items per page</span><a href="#" class="k-pager-refresh k-link" title="Refresh"><span class="k-icon k-i-reload"></span></a><span class="k-pager-info k-label">No items to display</span></div>
+            </div>
+
+
+
+            <div class="row">
+
+
+                <div">
+                    <input type="text" value="Total No of Data Uploaded" style="width:180px; height:30px;border: 2px solid #415068; float:left; text-align:center;" />
+                    <input type="text" style="width:100px; height:30px;border: 2px solid #415068;float:left;" />
+                    <input type="text" style="width:100px; height:30px;border: 2px solid #415068; float:left;" />
+                    <input type="text" style="width:100px; height:30px;border: 2px solid #415068;float:left;" />
+                    <input type="text" style="width:100px; height:30px;border: 2px solid #415068; float:left;" />
+
+                    <input type="button" value="Dump Full GL 214100Data" style="width:190px; height:30px;border: 2px solid #415068;float:left;background-color:forestgreen;color:white" />
+                    <input type="text" style="width:100px; height:30px;border: 2px solid #415068; float:left;" />
+                    <input type="text" style="width:100px; height:30px;border: 2px solid #415068; float:left;" />
+                    
+
+
+
+
+
+            </div>
+            <div class="row" >
+                <input type="button" value="Process" style="width:100px; height:30px;border: 2px solid #415068;float:right;background-color:forestgreen;color:white;margin-right:10px" />
+
+            </div>
+
+
+        </div>
+
+        @*<div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-3">
+
+                </div>
+
+                <div class="col-lg-5 col-md-5 col-sm-5">
+
+                    <div class="form-group">
+
+                        <span style="margin-left:50px">DisCodeNo:</span>
+                        <input type="text" name="name" value="" style="width:42%;margin-left:25px" />
+
+                    </div>
+                </div>
+
+                <div class="col-lg-1 col-md-1 col-sm-1">
+
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <div class="form-group">
+                        <input type="button" style="background-color:#293955;color:white; float:left;width:45%" value="Attachment" />
+                        <input type="button" style="background-color:#293955;color:white; float:right;width:40%" value="Add" />
+                    </div>
+                </div>
+
+
+            </div>*@
+
+
+    </div>
+
+
+
+</div>
+
+

@@ -1,0 +1,341 @@
+﻿@model TOZAI.Models.LoginViewModel
+@{
+    ViewBag.Title = "WithdrawMember";
+}
+
+
+<style type="text/css">
+    ul li {
+        list-style-type: none;
+        text-decoration: none;
+        display: inline;
+    }
+
+    .firstinput {
+        width: 130px;
+    }
+
+    .changelistyle {
+        margin-right: 2px;
+    }
+
+    input[type=radio] {
+        margin-top: 0px;
+    }
+
+    select {
+        width: 80px;
+        margin-left: 10px;
+        height: 24px;
+    }
+
+    p, label {
+        padding: 0;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    input[type=checkbox] {
+        margin-top: -2px;
+    }
+
+    .ul-1 {
+        margin-top: 15px;
+        word-spacing: 1.5em;
+        /*margin-bottom: 15px;*/
+        width: 100%;
+    }
+
+    .ul-2 {
+        /*margin-top: 15px;*/
+        /*word-spacing: 1.5em;*/
+        /*margin-bottom: 15px;*/
+        width: 100%;
+    }
+
+        .ul-2 li {
+            width: 100%;
+        }
+
+    .ul-3 {
+        /*margin-top: 30px;*/
+        /*word-spacing: 1.5em;*/
+        /*margin-bottom: 15px;*/
+        width: 100%;
+        /*position: fixed;*/
+    }
+
+    .ul-4 {
+        /*margin-top: 30px;*/
+        /*word-spacing: 1.5em;*/
+        /*margin-bottom: 15px;*/
+        width: 100%;
+        position: relative;
+    }
+
+    .checkbox-class {
+        width: auto;
+    }
+
+    .chkbox {
+        width: 13%;
+        padding: 0px 0px;
+        position: relative;
+    }
+
+    li.chkbox p {
+        width: auto;
+        padding: 0px 0px;
+        float: left;
+    }
+
+    #tbl-2 thead tr th, #tbl-2 tbody tr td {
+        border: 1px solid black;
+    }
+
+    /*  */
+
+    fieldset.scheduler-border {
+        border: 1px groove #ddd !important;
+        /*padding: 0 1.4em 1.4em 1.4em !important;
+        margin: 0 0 1.5em 0 !important;*/
+        padding: 0px 5px 15px 0px !important;
+        margin: 0px 0px 5px 0px !important;
+        -webkit-box-shadow: 0px 0px 0px 0px #000;
+        box-shadow: 0px 0px 0px 0px #000;
+    }
+
+    legend.scheduler-border {
+        font-size: 1.2em !important;
+        font-weight: bold !important;
+        text-align: left !important;
+        width: auto;
+        padding: 0 10px;
+        border-bottom: none;
+    }
+
+    /* */
+</style>
+
+<link href="~/Custom/css/style.css" rel="stylesheet" />
+
+<div class="container-fluid" style="font-size:12px;">
+    <div class="row" style="height: 15px;"></div>
+    @*<div class="row">
+        <div class="col-md-12">
+            <h3 style="float:left">組合員検索</h3>
+            <a href="#" class="lgout">ログアウト</a>
+        </div>
+        
+    </div>*@
+    <div class="row" style="height: 15px;"></div>
+    <div class="row" style="background: #98beef;padding: 10px;border-radius: 10px;margin-left:15px;margin-right:15px;">
+        <div class="col-md-12">
+            <div id="node-1" class="" style="min-height: 200px;margin-left: -8px;margin-right: -10px;">
+                <div class="col-md-12" style="border-radius: 5px;border: 1px solid #2a82c4;background: #eef3f9;height:200px;  ">
+                    <div class="col-md-12">
+                        <div class="col-md-3">
+                            <div class="control-group" style="padding: 0px;margin-left: -30px;margin-right: 0px;">
+                                <label class="control-label input-label col-sm-5" for="" style="width: 92px;padding-top: 10px;padding-bottom: 10px;font-weight: 100;">加入申込日</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="" id="" name="" style="width: 89px;margin-top: 6px;padding-bottom: 10px;margin-left:8px;" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="control-group" style="padding: 0px;margin-left: -32px;margin-right: 0px;">
+                                <label class="control-label input-label col-sm-5" for="" style="width: 97px;padding-top: 10px;padding-bottom: 10px;font-weight: 100;">組合員コード</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="" id="" name="" style="width: 89px;margin-top: 6px;padding-bottom: 10px;margin-left:5px;" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="control-group">
+                                <label class="control-label input-label col-sm-5" for="" style="margin-left: -36px;width: 92px;padding-top: 10px;padding-bottom: 10px;font-weight: 100;">組合員名</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="datetime" id="" name="" style="padding-top: 10px;padding-bottom: 10px;margin-top: 6px;width:89px;margin-left:6px;" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="control-group">
+                                <label class="control-label input-label col-sm-5" for="" style="margin-left: -36px;width: 92px;padding-top: 10px;padding-bottom: 10px;font-weight: 100;">組合員かな</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="datetime" id="" name="" style="padding-top: 10px;padding-bottom: 10px;margin-top: 6px;width:89px;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="col-md-12" style="margin-top:10px;">
+                        <div class="col-md-3">
+                            <span style="margin-left:-10px;"> 種別：</span>
+                                                                                       <div style="
+    margin-top:  -17px;
+    margin-left: 40px;
+"
+>
+                                                                                           <span style="float:left; width:70px;" class="chkbox" > 代表者役職：</span ><input type="checkbox" class="checkbox-class"  />
+                                                                                       </div>
+
+                        </div>
+                        <div class="col-md-3">
+                            <span style="float:left; width:70px; margin-left:-15px;" class="chkbox"> 代表者名職：</span><input type="checkbox" class="checkbox-class" />
+                            <div style="
+    margin-top:  -17px;
+    margin-left: 60px;
+">
+                                <span style="float:left; width:70px;margin-left:15px;" class="chkbox"> 代表者かな</span><input type="checkbox" class="checkbox-class" />
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-3">
+                            <span style="float:left; width:70px;margin-left:-15px;" class="chkbox"> 代表者役職 </span><input type="checkbox" class="checkbox-class" />
+                            <div style="
+    margin-top:  -17px;
+    margin-left: 40px;
+">
+                                <span style="float:left; width:70px;margin-left:15px;" class="chkbox"> 代表者名</span><input type="checkbox" class="checkbox-class" />
+                            </div>
+
+                        </div>
+                        <div class="col-md-3">
+                            <span style="float:left; width:70px;margin-left:-15px;" class="chkbox"> 代表者かな</span><input type="checkbox" class="checkbox-class" />
+                            
+
+                        </div>
+                    </div>
+                      
+                    <br />
+                    <br />
+
+                    <div class="col-md-12">
+
+                        <div class="col-md-3">
+                            <div class="control-group" style="padding: 0px;margin-left: -30px;margin-right: 0px;">
+                                <span class="control-label input-label col-sm-5" for="" style="width: 92px;padding-top: 10px;padding-bottom: 10px;font-weight: 100;margin-left:7px;">申込日</span>
+                                <div class="col-sm-6">
+                                    <input type="text" class="" id="" name="" style="width: 90px;margin-top: 6px;padding-bottom: 10px;margin-left:10px" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3" style="
+    margin-top: 10px;
+">
+                            <span style="float:left; width:70px;margin-left:-10px;">申請 </span>
+                            <select style="
+
+    margin-left: 35px; width:90px;">
+                                <option value="value">：業務部</option>
+                                <option value="value">：NKU</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-3" style="
+    margin-top: 10px;
+">
+                            <span style="float:left; width:70px;margin-left:-15px;">申請 </span>
+                            <select style="
+
+    margin-left: 30px; width:90px;">
+                                <option value="value">：業務部</option>
+                                <option value="value">：NKU</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="control-group" style="padding: 0px;margin-left: -30px;margin-right: 0px;">
+                                <span class="control-label input-label col-sm-5" for="" style="width: 92px;padding-top: 10px;padding-bottom: 10px;font-weight: 100;">更新日</span>
+                                <div class="col-sm-6">
+                                    <input type="text" class="" id="" name="" style="width: 89px;margin-top: 6px;padding-bottom: 10px;" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-3" style="
+    margin-top: 10px;
+">
+                            <span style="float:left; width:70px;margin-left:-9px;">帳票 </span>
+                            <select style="
+
+    margin-left: 35px; width:90px;">
+                                <option value="value">：業務部</option>
+                                <option value="value">：NKU</option>
+                            </select>
+                        </div>
+
+                    </div>
+                        
+
+                    </div>
+        </div>
+    </div>
+        </div>
+    <div class="row" style="height: 15px;margin-bottom:5px;"></div>
+</div>
+ 
+<div class="container-fluid" style="font-size:12px;">
+    <div class="row" style="height: 15px;"></div> 
+    <div class="row">
+        <div class="col-md-6"  style="background: #98beef;padding: 15px;border-radius: 10px ;margin-left:32px;margin-right:15px;">
+            <p class="smheader" style="font-size: large;font-weight: 900;">組合員退会</p>
+            <div id="node-1" class="" style="min-height: 250px;">
+                <div class="col-md-12" style="border-radius: 5px;border: 1px solid #2a82c4;background: #eef3f9;height:230px;  ">
+                    
+                    
+                    <div class="col-md-12">
+                        <div class="col-md-6">
+                            <div class="control-group" style="padding: 0px;margin-left: -32px;margin-right: 0px;">
+                                <label class="control-label input-label col-sm-5" for="" style="width: 94px;padding-top: 10px;padding-bottom: 10px;font-weight: 700;">退会予告書</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="" id="" name=""  style="width: 89px;margin-top: 6px;padding-bottom: 10px;"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="control-group">
+                                <label class="control-label input-label col-sm-5" for="" style="margin-left: -36px;width: 92px;padding-top: 10px;padding-bottom: 10px;font-weight: 700;">退会予告書</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="datetime" id="" name="" style="padding-top: 10px;padding-bottom: 10px;margin-top: 6px;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <fieldset class="scheduler-border">
+                            <legend class="scheduler-border">回収日付
+                            </legend>
+                            <div class="control-group">
+                                <label class="control-label input-label col-sm-3" for="">退会予告書</label>
+                                <div class="col-sm-8" style="margin-bottom: 3px;">
+                                    <input type="text" class="datetime"  id="" name="" />
+                                </div>
+                                <label class="control-label input-label col-sm-3" for="">出資証券</label>
+                                <div class="col-sm-8" style="margin-bottom: 3px;">
+                                    <input type="text" class="datetime" id="" name="" />
+                                </div>
+                                <label class="control-label input-label col-sm-3" for="">給油カード</label>
+                                <div class="col-sm-8" style="margin-bottom: 3px;">
+                                    <input type="text" class="datetime" id="" name="" />
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="col-md-7 text-right">
+                            <label style=" padding-top: 5px;">ステータス：可決</label>
+                        </div>
+                        <div class="col-md-5">
+                            <input type="submit" value="確定" class="fieldset1-button1" style="height:30px;width: 102px;">
+                        </div>
+                    </div>
+                   
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row" style="height: 15px;"></div>
+</div>

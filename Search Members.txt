@@ -1,0 +1,489 @@
+﻿@model TOZAI.Models.LoginViewModel
+@{
+    ViewBag.Title = "SearchMembers";
+}
+
+
+<style type="text/css">
+    ul li {
+        list-style-type: none;
+        text-decoration: none;
+        display: inline;
+    }
+
+    .firstinput {
+        width: 130px;
+    }
+
+    .changelistyle {
+        margin-right: 2px;
+    }
+
+    input[type=radio] {
+        margin-top: 0px;
+    }
+
+    select {
+        width: 80px;
+        margin-left: 10px;
+        height: 24px;
+    }
+
+    p, label {
+        padding: 0;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    input[type=checkbox] {
+        margin-top: -2px;
+    }
+
+    .ul-1 {
+        margin-top: 15px;
+        word-spacing: 1.5em;
+        /*margin-bottom: 15px;*/
+        width: 100%;
+    }
+
+    .ul-2 {
+        /*margin-top: 15px;*/
+        /*word-spacing: 1.5em;*/
+        /*margin-bottom: 15px;*/
+        width: 100%;
+    }
+
+        .ul-2 li {
+            width: 100%;
+        }
+
+    .ul-3 {
+        /*margin-top: 30px;*/
+        /*word-spacing: 1.5em;*/
+        /*margin-bottom: 15px;*/
+        width: 100%;
+        /*position: fixed;*/
+    }
+
+    .ul-4 {
+        /*margin-top: 30px;*/
+        /*word-spacing: 1.5em;*/
+        /*margin-bottom: 15px;*/
+        width: 100%;
+        position: relative;
+    }
+
+    .checkbox-class {
+        width: auto;
+    }
+
+    .chkbox {
+        width: 13%;
+        padding: 0px 0px;
+        position: relative;
+    }
+
+    li.chkbox p {
+        width: auto;
+        padding: 0px 0px;
+        float: left;
+    }
+
+    #tbl thead tr th, #tbl tbody tr td {
+        border: 1px solid black;
+    }
+
+    .common-date-picker {
+        width: 80px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="~/Custom/css/style.css" rel="stylesheet" />
+
+<div class="container-fluid" style="font-size:12px;">
+    <div class="row" style="height: 15px;"></div>
+    <div class="container-fluid">
+
+        <div class=" col-md-10" style="background: #98beef;padding: 10px;border-radius:10px;margin-left:15px;margin-right:55px;width:1000px;height:650px;">
+            <div class="col-sm-10 col-md-10 col-lg-10">
+                <div id="node-1" style="min-height: 600px; padding-left:15px;padding-right:1px">
+                    <div class=" col-sm-10 col-md-10 col-lg-10 " style="border-radius: 5px;border: 1px solid #2a82c4;background: #eef3f9;height:300px;width:120%;margin-left:-10px;">
+                        <ul class="ul-1">
+                            <li class="changelistyle"><span>組合員コード</span> <input type="text" id="u_mem_code" maxlength="4" style="width: 120px;"> </li>
+                            <li class="changelistyle"><span>組合名（カナ)</span> <input type="text" id="u_name_kana" style="width:250px;"> </li>
+                            <li class="changelistyle"><span>TEL</span> <input type="text" id="tel" maxlength="15" style="width: 120px;"> </li>
+                            <br />
+                            <br />
+                            <li class=""><span>FAX</span> <input type="text" id="fax" maxlength="15" style="width: 120px; margin-left:45px;"> </li>
+                        </ul>
+                        <br />
+                        <ul class="ul-2 col-md-12">
+                            <li class="chkbox"><p> 種別：</p> </li>
+                            <li class="chkbox"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;コーポレートカード&nbsp;</p> <input type="checkbox" class="checkbox-class"> </li>
+                            <li class="chkbox"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp SKETカード   &nbsp;</p> <input type="checkbox" class="checkbox-class"> </li>
+                            <li class="chkbox"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp 給油カード &nbsp;</p> <input type="checkbox" class="checkbox-class"> </li>
+                            <li class="chkbox"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp たのめーる &nbsp;</p> <input type="checkbox" class="checkbox-class"> </li>
+                            <li class="chkbox"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  実習生   &nbsp;</p> <input type="checkbox" class="checkbox-class"> </li>
+                            <li class="chkbox"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  物販 &nbsp;</p> <input type="checkbox" class="checkbox-class"> </li>
+                        </ul>
+                        <br />
+                        <br />
+                        <ul class="ul-3">
+                            <li class=""><span>申込日 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> <input type="text" class="common-date-picker"> </li>
+                            <li class="">
+                                <span>申請</span>
+                                <select>
+                                    <option value="value">：業務部</option>
+                                    <option value="value">：NKU</option>
+                                </select>
+                            </li>
+                            <li class="">
+                                <span>審査</span>
+                                <select>
+                                    <option value="value">：業務部</option>
+                                    <option value="value">：NKU</option>
+                                </select>
+                            </li>
+                            <li class=""><span>更新日</span> <input type="text" class="common-date-picker"> </li>
+                        </ul>
+                        <br />
+                        <ul class="ul-3">
+                            <li class="">
+                                <span>保証金 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class=""></span>
+                                @*<select>
+                                        <option value="value">：業務部</option>
+                                        <option value="value">：NKU</option>
+                                    </select>*@
+                            </li>
+                        </ul>
+                        <ul class="ul-3">
+                            <li class="">
+                                <span> 帳票 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class=""></span>
+                            </li>
+                        </ul>
+                    </div>
+                
+           
+        
+    
+
+                    <div class="col-lg-12"> <br></div>
+                    <div class="col-sm-4 col-md-8 col-lg-12 " style="border-radius: 5px;border: 1px solid #2a82c4;background: #eef3f9;height:300px;width:120%;margin-left:-10px;">
+
+                        <div class=" " style="padding-top:10px;padding-bottom:20px;">
+                            <span style="display:inline">
+                                <button class="sm-button sm-button-long" type="button">すべてチェックする</button>
+                                <button class="sm-button sm-button-long" style="margin-left:10px" type="button">すべてチェック外す</button>
+                            </span>
+                            <span style="display:inline; float:right">
+
+                                <button class="sm-button" style="margin-right:0px" id="btnSearch" type="button">検索</button>
+                                <button class="sm-button" id="btnClear" type="button">条件クリア</button>
+                            </span>
+
+                        </div>
+                        
+                        <table class="table table-bordered" style="border: 1px groove #ddd !important;" id="tbl">
+                            <thead class="">
+                                <tr>
+                                    <th style="background-color: #d9d9d9; border-color: black;">
+                                    </th>
+                                    <th>組合員コード</th>
+                                    <th>組合員名</th>
+                                    @*<th>部門コード</th>
+                                        <th>部門名</th>*@
+                                    <th>住所</th>
+                                    <th>TEL</th>
+                                    <th>代表者名</th>
+                                    <th>利用</th>
+                                    <th>送付先住所</th>
+                                    <th>送付対象</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @*<tr>
+                                        <td><input type="checkbox" name="name"> </td>
+                                        <td>0001</td>
+                                        <td>㈱山田商事</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>東京都新宿○○</td>
+                                        <td>03-****-****</td>
+                                        <td>山田　太郎</td>
+                                        <td>C　S　給　た　実</td>
+                                        <td>東京都新宿○○</td>
+                                        <td>請</td>
+
+                                    </tr>*@
+                            </tbody>
+
+                        </table>
+                        <div class=" " style="padding-top:10px;padding-bottom:20px;">
+                            <span style="float:right;margin-right:0px;">
+                                <button class="sm-button" type="button">退会</button>
+                            </span>
+                        </div>
+                        <div class=" " style="padding-top:10px;padding-bottom:20px;">
+                            <span style="float:right;margin-right:0px; display:inline;">
+                                <button class="sm-button" type="button">リスト出力</button>
+                                <button class="sm-button" style="margin-right: 0px" type="button">帳票プレビュー</button>
+                            </span>
+                        </div>
+                        <br />
+                        <br />
+                    </div>
+
+                    <div class="col-md-12"><br></div>
+                </div>
+            </div>
+        </div>
+            </div>
+    </div>
+    <div class="row" style="height: 15px;"></div>
+
+
+<script src="~/Scripts/jquery-2.1.3.min.js"></script>
+<script>
+
+    function searchData() {
+        var mcode = $('#u_mem_code').val(), mname = '', index = 0;
+        $("#tbl tbody >tr").remove();
+        var dtTable = $("#tbl");
+
+        $.ajax({
+            type: 'GET',
+            url: '@Url.Action("GetU_MemberForSearch", "Member")',
+            dataType: 'json',
+            data: { mcode: mcode},
+            success: function (records) {
+                console.log('found ');
+                console.log(records);
+                $.each(records, function (i, op) {
+                    var prtname = op.Union_Member_Name;
+                    var tdid = op.ID;
+                    var tdUMC = op.Union_Member_Cd;
+                    var tdDC = op.Department_Code;
+                    var tdOC = op.Office_Code;
+                    var tdSC = op.Section_Code;
+                    var tdDN = op.Department_Name;
+                    var telN = op.Tel;
+                    //var faxN = op.Fax_numbar;
+                    var tableBody = dtTable.find('tbody');
+                    tableBody.append(
+                        '<tr id=' + index + ' ondblclick="details(' + tdid + ')"" >' +
+                            '<td><input type="checkbox" name="name"> </td>' +
+                            '<td>' + tdUMC + '</td>' +
+                            //'<td>' + tdDN + '</td>' +
+                            '<td>' + + '</td>' +
+                            '<td>' + prtname + '</td>' +
+                            '<td>' + telN + '</td>' +
+                            '<td>' + + '</td>' +
+                            '<td>' + + '</td>' +
+                            '<td>' + + '</td>' +
+                            '<td>' + + '</td>' +
+                            //'<td>' + + '</td>' +
+                            //'<td>' + + '</td>' +
+                            //'<td><a href="#" data-toggle="tooltip" title="Edit" class="btn btn-sm btn-info" onclick="details(' + tdid +  ')"><i class="fa fa-pencil"></i></a></td>' +
+                        /*'<td><a href="#" data-toggle="tooltip" title="Edit" class="btn btn-sm btn-info" onclick="edit(' + "'" + tdid + "'" + ','  + "'" + tdUMC + "'" + ',' + "'" + tdDC + "'" + ',' + "'" + tdOC + "'" + ',' + "'" + tdSC +  "'" + ',' + "'" + tdDN + "'" + ',' + index + ')"><i class="fa fa-pencil"></i></a>'+*/
+                       /* &nbsp;<a href="#" data-toggle="tooltip" title="Delete" class="btn btn-sm btn-danger" onclick="delete(' +"'"+ tdid + "'"+',' + index + ')"><i class="fa fa-trash-o"></i></a></td>' +*/
+
+                         '</tr>')
+                    index = index + 1;
+                });
+                //pageabletable();
+            },
+            error: function (ex) {
+                alert('Failed to retrieve Data.' + ex);
+            }
+        });
+
+    };
+
+    function details(ID) {
+        var link = '@Url.Action("MemberRegistrationDetail", "Member", new { ID = -1 }, "http")'
+        link = link.replace("-1", ID);
+        window.location.href = link;
+        // window.open(link, '_blank')
+    }
+
+
+
+    function tableRefresh(mcode) {
+        var index = 0;
+        $("#tbl tbody >tr").remove();
+        var dtTable = $("#tbl");
+        console.log(mcode);
+        $.ajax({
+            type: 'GET',
+            url: '@Url.Action("GetU_MemberForSearch", "Member")',
+            dataType: 'json',
+            data: { mcode: mcode },
+            success: function (records) {
+                console.log(records);
+                $.each(records, function (i, op) {
+                    var prtname = op.Union_Member_Name;
+                    var tdid = op.ID;
+                    var tdUMC = op.Union_Member_Cd;
+                    var tdDC = op.Department_Code;
+                    var tdOC = op.Office_Code;
+                    var tdSC = op.Section_Code;
+                    var tdDN = op.Department_Name;
+                    var telN = op.Tel;
+                    //var faxN = op.Fax_numbar;
+                    var tableBody = dtTable.find('tbody');
+                    tableBody.append(
+                        '<tr id=' + index + ' onclick="edit(' + "'" + tdid + "'" + ',' + "'" + tdUMC + "'" + ',' + "'" + tdDC + "'" + ',' + "'" + tdOC + "'" + ',' + "'" + tdSC + "'" + ',' + "'" + tdDN + "'" + ',' + index + ')">' +
+                            '<td>' + tdUMC + '</td>' +
+                            //'<td>' + tdDN + '</td>' +
+                            '<td>' +  + '</td>' +
+                            '<td>' + prtname + '</td>' +
+                            '<td>' + telN + '</td>' +
+                            '<td>' + + '</td>' +
+                            '<td>' + + '</td>' +
+                            '<td>' + + '</td>' +
+                            '<td>' + + '</td>' +
+                            '<td>' + + '</td>' +
+                            '<td>' + + '</td>' +
+                            '<td>' + + '</td>' +
+                            //'<td>' + + '</td>' +
+                         '</tr>')
+                    index = index + 1;
+                });
+                //pageabletable();
+            },
+            error: function (ex) {
+                alert('Failed to retrieve Data.' + ex);
+            }
+        });
+    };
+
+    function clearall() {
+        $('#u_mem_code').val(' ');
+        $('#app_date').val(' ');
+        $('#partner_name').val(' ');
+
+        $("#tbl tbody >tr").remove();
+    };
+    function pageabletable() {
+        $('#pages').remove();
+        var totalRows = $('#tbl').find('tbody tr:has(td)').length;
+        var recordPerPage = 3;
+        var totalPages = Math.ceil(totalRows / recordPerPage);
+        var $pages = $('<div id="pages"></div>');
+        for (i = 0; i < totalPages; i++) {
+            $('<span class="pageNumber">&nbsp;' + (i + 1) + '</span>').appendTo($pages);
+        }
+        $pages.appendTo('#tbl');
+        $('.pageNumber').hover(
+            function () {
+                $(this).addClass('focus');
+            },
+            function () {
+                $(this).removeClass('focus');
+            }
+        );
+        $('table').find('tbody tr:has(td)').hide();
+        var tr = $('table tbody tr:has(td)');
+        for (var i = 0; i <= recordPerPage - 1; i++) {
+            $(tr[i]).show();
+        }
+        $('span.pageNumber').click(function (event) {
+            $('#tbl').find('tbody tr:has(td)').hide();
+            var nBegin = ($(this).text() - 1) * recordPerPage;
+            var nEnd = $(this).text() * recordPerPage - 1;
+            for (var i = nBegin; i <= nEnd; i++) {
+                $(tr[i]).show();
+            }
+        });
+    };
+
+    function autocomplete1() {
+        var arr = [];
+        $.ajax({
+            type: 'GET',
+            url: '@Url.Action("GetUnionMemberCd", "DepartmentMaster")',
+            dataType: 'json',
+            data: {},
+            contentType: 'application/json; charset=utf-8',
+        })
+        .done(function (data) {
+            var a = 1;
+            $.each(data, function (index, option) {
+                var obj = {};
+                obj.key = a++;
+                obj.value = option.UnionMemberCode;
+                arr[arr.length] = obj;
+            });
+        })
+        .fail(function () {
+            console.log("Unable to load");
+        });
+
+        $('#u_mem_code').autocomplete({
+            source: arr,
+            select: function (event, ui) {
+                // $("#").val(ui.item.key);
+                $("#u_mem_code").val(ui.item.value);
+                fillName(ui.item.value);
+                //getDepartmentForTable();
+            }
+        });
+    };
+
+    function fillName(code) {
+        $.ajax({
+            type: 'GET',
+            url: '@Url.Action("GetUnionMemberName", "DepartmentMaster")',
+            dataType: 'json',
+            data: { code: code },
+            success: function (records) {
+                $('#u_name_kana').val(records[0].UnionMemberName);
+                $('#tel').val(records[0].TEL);
+                $('#fax').val(records[0].FAX);
+
+            },
+            error: function () {
+                alert('error to show name!');
+            }
+        });
+    };
+
+    $(document).ready(function () {
+
+        $(".common-date-picker").datepicker({
+
+            closeText: "閉じる",
+            prevText: "&#x3C;前",
+            nextText: "次&#x3E;",
+            currentText: "今日",
+            monthNames: ["1月", "2月", "3月", "4月", "5月", "6月",
+                "7月", "8月", "9月", "10月", "11月", "12月"],
+            monthNamesShort: ["1月", "2月", "3月", "4月", "5月", "6月",
+                "7月", "8月", "9月", "10月", "11月", "12月"],
+            dayNames: ["日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"],
+            dayNamesShort: ["日", "月", "火", "水", "木", "金", "土"],
+            dayNamesMin: ["日", "月", "火", "水", "木", "金", "土"],
+            weekHeader: "週",
+            dateFormat: "yy/mm/dd",
+            firstDay: 0,
+            isRTL: false,
+            showMonthAfterYear: true,
+            yearSuffix: "年",
+            yearRange: "2000:2050"
+            //dateFormat: "dd-M-yy",
+            //showAnim: "scale",
+            //changeMonth: true,
+            //changeYear: true,
+            //yearRange: "2000:2050"
+        });
+        //autocomplete1();
+        $("#btnSearch").on('click', searchData);
+        $("#btnClear").on('click', clearall);
+
+    })//close ready
+</script>

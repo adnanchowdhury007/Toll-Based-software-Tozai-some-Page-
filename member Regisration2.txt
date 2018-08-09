@@ -1,0 +1,462 @@
+<div class="tab-pane" id="5a" style="min-height:400px;">
+
+            <div class="container-fluid" style="color:#000;">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+
+                    </div><br />
+
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <fieldset class="scheduler-border" style="background-color:#EEF3F9;border-radius:10px 10px 10px 10px;">
+                            <br />
+
+                            <p>
+                                <b>業務委託先</b>
+                            </p><br>
+                            <div class="container-fluid" style="color:#000;">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <div style="float:left;margin-left:-15px;">
+                                            <span>
+                                                委託委託先1
+                                            </span>
+                                            <select>
+                                                <option>001000:山田商店</option>
+                                                <option>select item</option>
+                                            </select>
+
+                                        </div>
+                                        <div style="margin-left:30%">
+                                            <span>
+                                                委託委託先2
+                                            </span>
+                                            <select>
+                                                <option>002000:鈴木商店</option>
+                                                <option>select item</option>
+                                            </select>
+                                        </div> </fieldset>
+                    </div>
+
+                    <div class="  col-md-12 col-sm-12 col-lg-6 ">
+                        <fieldset class="scheduler-border" style="background-color:#EEF3F9;border-radius:10px 10px 10px 10px;width:100%;height:500px;">
+                            <br />
+                            <div class="control-group">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+
+                                    </div> <br />
+                                    <div class="col-sm-6 col-md-4 col-lg-6">
+                                        <p><b>コーポレートカード</b></p>
+                                        <fieldset style="float:left;">
+
+
+                                            <div class="control-group">
+                                                <div class="row" >
+                                                    <div class="col-sm-6 col-md-6 col-lg-6">
+
+                                                    </div> <br />
+                                                    <table border="1" style="width:200%">
+
+                                                        <tr>
+                                                            <th>
+                                                                委託先コード
+                                                            </th>
+                                                            <th>
+                                                                委託先名
+                                                            </th>
+                                                            <th>
+                                                                道路会社
+
+                                                            </th>
+                                                            <th>
+                                                                手数料率
+
+                                                            </th>
+                                                            <th>
+                                                                手数料額
+
+
+                                                            </th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th rowspan="8">
+                                                                001000
+                                                            </th>
+                                                            <th rowspan="8">
+                                                                山田商店
+
+                                                            </th>
+
+                                                            <td>
+                                                                NEXCO（高速国道）
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                NEXCO（一般有料）
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                首都高（基本割引）
+
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                首都高（拡充割引）
+
+
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                阪神高速（阪神圏）
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                阪神高速（京都圏）
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                阪神高速（拡充分
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                本四
+
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+
+
+                                                        <tr>
+                                                            <th rowspan="8">
+                                                                002000
+                                                            </th>
+                                                            <th rowspan="8">
+                                                                山田商店
+
+                                                            </th>
+
+                                                            <td>
+                                                                NEXCO（高速国道）
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                NEXCO（一般有料）
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                首都高（基本割引）
+
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                首都高（拡充割引）
+
+
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                阪神高速（阪神圏）
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                阪神高速（京都圏）
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                阪神高速（拡充分
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                本四
+
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+
+                                                    </table>
+                                        </fieldset>
+                                    </div>
+                        </fieldset>
+                    </div>
+
+                    <div class=" col-sm-12 col-md-12 col-lg-6">
+                        <fieldset class="scheduler-border" style="background-color:#EEF3F9;border-radius:10px 10px 10px 10px;width:100%;height:500px;">
+                            <br />
+                            <div class="control-group">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+
+                                    </div> <br />
+
+                                    <div class="col-sm-6 col-md-4 col-lg-6">
+                                        <p><b> SKETカード</b></p>
+                                        <fieldset style="float:left;">
+                                            <div class="control-group">
+                                                <div class="row">
+                                                    <div class="col-sm-6 col-md-4 col-lg-6">
+
+                                                    </div> <br />
+
+                                                    <table border="1" style="width:200%">
+
+                                                        <tr>
+                                                            <th>
+                                                                委託先コード
+                                                            </th>
+                                                            <th>
+                                                                委託先名
+                                                            </th>
+                                                            <th>
+                                                                道路会社
+
+                                                            </th>
+                                                            <th>
+                                                                手数料率
+
+                                                            </th>
+                                                            <th>
+                                                                手数料額
+
+
+
+                                                            </th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th rowspan="8">
+                                                                001000
+                                                            </th>
+                                                            <th rowspan="8">
+                                                                山田商店
+
+                                                            </th>
+
+                                                            <td>
+                                                                NEXCO（高速国道）
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                NEXCO（一般有料）
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                首都高（基本割引）
+
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                首都高（拡充割引）
+
+
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                阪神高速（阪神圏）
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                阪神高速（京都圏）
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                阪神高速（拡充分
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                本四
+
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+
+
+                                                        <tr>
+                                                            <th rowspan="8">
+                                                                002000
+                                                            </th>
+                                                            <th rowspan="8">
+                                                                山田商店
+
+                                                            </th>
+
+                                                            <td>
+                                                                NEXCO（高速国道）
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                NEXCO（一般有料）
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                首都高（基本割引）
+
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                首都高（拡充割引）
+
+
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                阪神高速（阪神圏）
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>
+                                                                阪神高速（京都圏）
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                阪神高速（拡充分
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                本四
+
+                                                            </td>
+                                                            <td></td>
+
+                                                            <td></td>
+                                                        </tr>
+
+                                                    </table>
+                                        </fieldset>
+                                    </div>
+                                </div>
+
+                        </fieldset>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
